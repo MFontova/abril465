@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets"
+
+interface Props {
+  image: ImageMetadata,
+  name: string
+}
+
+const {image, name} = Astro.props;
+---
+
+<a href="google.es" target="_blank">
+  <div class="flex flex-col items-center hover:scale-110 transition-all">
+    <Image src={image} alt="CalaMitat" class='max-w-md w-full' />
+    <p>{name}</p>
+  </div>
+</a>

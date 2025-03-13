@@ -1,0 +1,15 @@
+---
+import { getImage, Image } from "astro:assets"
+import horizontal from "../assets/horizontal_characters.png"
+import FollowButton from "./FollowButton.astro"
+import aleix from "../assets/aleix.png"
+import jordi from "../assets/jordi.png"
+---
+
+<section class="flex flex-col gap-2 p-5">
+  <h2 class="text-2xl font-semibold text-center">Segueix-nos!</h2>
+  <div class="flex gap-2 justify-center">
+    <FollowButton image={jordi} name="@cala.mitat" />
+    <FollowButton image={aleix} name="@aleixcalafell" />      
+  </div>
+</section>
