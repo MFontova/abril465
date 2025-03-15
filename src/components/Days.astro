@@ -1,45 +1,36 @@
 ---
-import Circle from "../icons/Circle.astro"
-import CircleCheck from "../icons/CircleCheck.astro"
+import Day, { DayType } from "./Day.astro"
 
-const days = Array.from({length: 30}, (_, i) => i + 1)
-console.log(days)
-const date = new Date()
-const today = date.getDate()
-const month = date.getMonth()
+const targetMonth = 3
+const days = Array.from({length: 30}, (_, i) => new Date(2025, targetMonth, i + 1, 8, 0, 0, 0))
+const currentDate = new Date()
 let sum = 0
-for (let i = 0; i <= today; i++) {
-  sum += i
-}
-const targetMonth = 2
+days.forEach(d => {
+  if(d.getTime() <= currentDate.getTime()) {
+    sum += d.getDate()
+  }
+})
 ---
 
 <section class="p-5 py-10 bg-[#222] text-white inclinate">
-  <!-- <h2 class="text-center mb-5">Segueix el repte</h2> -->
   <div class="flex flex-col items-center mb-5">
-    <p class="text-yellow-500 text-4xl font-semibold">{month == targetMonth ? sum : 465}</p>
+    <p class="text-yellow-500 text-4xl font-semibold">{sum}</p>
     <p class="text-sm">km acumulats!</p>
   </div>
-  <div class="grid grid-cols-7 gap-2 items-center max-w-xl mx-auto">  
+  <div class="grid grid-cols-7 gap-2">
     {
-      month == targetMonth
-      ? days.map(day => (
-        <div class={`flex flex-col border rounded-xl mx-auto border-gray-500 text-gray-500 text-centerjustify-center items-center w-full ${day == today && 'bg-yellow-500 border-yellow-500 text-xll font-bold text-white'} ${day < today && 'bg-gray-200 border-gray-200 text-gray-600'}`}>
-          <p>{day}</p>
-          {
-            today >= day 
-              ? <CircleCheck />
-              : <Circle/>
-          }
-        </div>
-      ))
-      : days.map(day => (
-      <div class={`flex flex-col border rounded-xl mx-auto bg-gray-200 border-gray-200 text-gray-600 text-centerjustify-center items-center w-full`}>
-          <p>{day}</p>
-          <CircleCheck/>
-        </div>
-      ))
-      
+      days.map(d => {
+        if(currentDate.getTime() >= d.getTime()) {
+          return (
+            <Day day={d.getDate()} type={DayType.COMPLETED} />
+          )
+        }
+        if(d.getTime() > currentDate.getTime()) {
+          return (
+            <Day day={d.getDate()} type={DayType.UNCOMPLETED} />
+          )
+        }
+      })
     }
   </div>
 </section>

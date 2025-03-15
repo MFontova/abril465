@@ -4,6 +4,7 @@ import Collaborate from '../components/Collaborate.astro';
 import Days from '../components/Days.astro';
 import Follow from '../components/Follow.astro';
 import Hero from '../components/Hero.astro';
+import Sponsors from '../components/Sponsors.astro';
 import WhatIs from '../components/WhatIs.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -15,7 +16,8 @@ import Layout from '../layouts/Layout.astro';
 	<Hero />
 	<WhatIs />
 	<Collaborate />
-	<Days/>
+	<Days server:defer />
 	<About />
 	<Follow />
+	<Sponsors/>
 </Layout>

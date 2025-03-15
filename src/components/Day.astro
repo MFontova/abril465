@@ -1,0 +1,28 @@
+---
+import Circle from "../icons/Circle.astro";
+import CircleCheck from "../icons/CircleCheck.astro";
+
+export enum DayType {
+  COMPLETED,
+  UNCOMPLETED
+}
+interface Props {
+  day: number,
+  type: DayType
+}
+
+const { day, type } = Astro.props
+---
+
+<div class={`
+  ${type == DayType.COMPLETED && 'bg-yellow-500 border-yellow-500 text-white'}
+  ${type == DayType.UNCOMPLETED && 'bg-gray-500 border-gray-500 text-gray-300'}
+  flex flex-col border rounded-xl mx-auto text-centerjustify-center items-center w-full`}>
+  <p>{day}</p>
+  {
+    type == DayType.COMPLETED && <CircleCheck/>
+  }
+  {
+    type == DayType.UNCOMPLETED && <Circle/>
+  }
+</div>
