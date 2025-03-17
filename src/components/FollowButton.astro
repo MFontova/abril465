@@ -2,19 +2,21 @@
 import { Image } from "astro:assets"
 import Instagram from "../icons/Instagram.astro";
 import TikTok from "../icons/TikTok.astro";
+import { ImageSwitcher } from "./ImageSwitcher";
 
 interface Props {
-  image: ImageMetadata,
+  normalImage: ImageMetadata,
+  noseImage: ImageMetadata,
   name: string,
   tiktok: string,
   instagram: string,
 }
 
-const {image, name, tiktok, instagram} = Astro.props;
+const {normalImage, noseImage, name, tiktok, instagram} = Astro.props;
 ---
 
 <div class="flex flex-col items-center">
-  <Image src={image} alt="CalaMitat" class='max-w-md w-full hover:scale-110 transition-all' />
+  <ImageSwitcher normalImage={normalImage} noseImage={noseImage} alt={name} client:only="react"/>
   <p class="text-center">{name}</p>
   <div class="flex gap-3 p-3">
     <a href={instagram} target="_blank" class="hover:scale-110 transition-all hover:text-yellow-500"><Instagram/></a>

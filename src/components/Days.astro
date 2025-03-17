@@ -17,7 +17,7 @@ days.forEach(d => {
     <p class="text-yellow-500 text-4xl font-semibold">{sum}</p>
     <p class="text-sm">km acumulats!</p>
   </div>
-  <div class="grid grid-cols-7 gap-2">
+  <div class="grid grid-cols-7 gap-2 max-w-md m-auto">
     {
       days.map(d => {
         if(currentDate.getTime() >= d.getTime()) {
