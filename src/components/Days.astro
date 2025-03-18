@@ -1,8 +1,8 @@
 ---
 import Day, { DayType } from "./Day.astro"
 
-const targetMonth = 3
-const days = Array.from({length: 30}, (_, i) => new Date(2025, targetMonth, i + 1, 8, 0, 0, 0))
+const targetMonth = 2
+const days = Array.from({length: 31}, (_, i) => new Date(2025, targetMonth, i + 1, 8, 0, 0, 0))
 const currentDate = new Date()
 let sum = 0
 days.forEach(d => {
@@ -12,12 +12,13 @@ days.forEach(d => {
 })
 ---
 
-<section class="p-5 py-10 bg-[#222] text-white inclinate">
+<section class="p-5 py-10 bg-[#222] bg-gradient-to-br from-[#222] to-[#444533] text-white inclinate">
   <div class="flex flex-col items-center mb-5">
     <p class="text-yellow-500 text-4xl font-semibold">{sum}</p>
     <p class="text-sm">km acumulats!</p>
   </div>
   <div class="grid grid-cols-7 gap-2 max-w-md m-auto">
+    <span></span>
     {
       days.map(d => {
         if(currentDate.getTime() >= d.getTime()) {
