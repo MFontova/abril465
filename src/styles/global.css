@@ -28,6 +28,10 @@ h2 {
   @apply text-2xl font-semibold
 }
 
+h3 {
+  @apply text-xl font-semibold
+}
+
 .inclinate {
   clip-path: polygon(0 20px, 100% 0, 100% calc(100% - 20px), 0 100%);
 }
