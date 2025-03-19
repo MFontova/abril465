@@ -2,7 +2,7 @@
 import Day, { DayType } from "./Day.astro"
 
 const targetMonth = 2
-const days = Array.from({length: 31}, (_, i) => new Date(2025, targetMonth, i + 1, 8, 0, 0, 0))
+const days = Array.from({length: 31}, (_, i) => new Date(2025, targetMonth, i + 1, 1, 0, 0, 0))
 const currentDate = new Date()
 let sum = 0
 days.forEach(d => {
