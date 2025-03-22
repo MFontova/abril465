@@ -1,14 +1,14 @@
 ---
 import { Image } from "astro:assets"
 import logoPallapupas from "../assets/pallapupas.svg"
-import logoBloodBros from "../assets/blood-bros-socks.png"
-import logoNutrisport from "../assets/nutrisport.png"
-import logoPitViper from "../assets/pit_viper.avif"
+import logoBloodBros from "../assets/blood-bros-socks.webp"
+import logoNutrisport from "../assets/nutrisport.webp"
+import logoPitViper from "../assets/pit_viper.webp"
 ---
 
 <section class="bg-[#222] bg-gradient-to-br from-[#222] to-[#444533] inclinate py-10 px-5 flex flex-col gap-5">
   <h2 class="text-center text-white">Patrocinadors</h2>
-  <div class="flex justify-between">
+  <div class="flex justify-between w-full max-w-md m-auto">
     <Image class="w-12 object-contain" src={logoPallapupas} alt="Logo Pallapupas" />
     <Image class="w-12 object-contain" src={logoBloodBros} alt="Blood Bros Socks" />
     <Image class="w-28 object-contain" src={logoNutrisport} alt="Nutrisport"  />
