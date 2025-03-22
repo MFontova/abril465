@@ -12,6 +12,7 @@
     "@astrojs/react": "^4.2.1",
     "@astrojs/vercel": "^8.1.2",
     "@fontsource-variable/oswald": "^5.2.5",
+    "@fontsource/kalam": "^5.2.5",
     "@tailwindcss/vite": "^4.0.14",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
