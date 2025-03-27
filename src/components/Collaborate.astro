@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import mitjonsFront from "../assets/mitjons-front.webp"
 import logoPallapupas from "../assets/pallapupas.svg"
-import samarreta from "../assets/samarreta.png"
+import samarreta from "../assets/samarreta465back.jpg"
 ---
 
 <section class="flex flex-col gap-3 p-5 text-center items-center">
@@ -14,17 +14,24 @@ import samarreta from "../assets/samarreta.png"
     Tots els beneficis dels mitjons edició ¨Abril 465¨ amb col·laboració amb <a href="https://bloodbros.store" target="_blank">Blood Bros Socks</a> aniran destinats a aquesta organització, de la mateixa manera que totes les donacions que recollirem durant tot el repte.
   </p>
   <div class="flex flex-col md:flex-row gap-2 my-5">
-    <a href="https://bloodbros.store/tienda/colectivos/abril-465/mitjons-abril-465/" target="_blank" class="py-10 px-5 w-full flex flex-col gap-5 justify-start items-center">
+    <a href="https://bloodbros.store/tienda/colectivos/abril-465/mitjons/" target="_blank" class="py-10 px-5 w-full flex flex-col gap-5 justify-start items-center">
       <h3>Compra uns mitjons</h3>
-      <Image src={mitjonsFront} alt="Compra els mitjons del repte esportiu Abril 465" height={200} />
+      <Image src={mitjonsFront} alt="Compra els mitjons del repte esportiu Abril 465" height={500} />
     </a>
-    <a href="" target="_blank" class="py-10 px-5 w-full flex flex-col gap-5 justify-start items-center">
+    <a href="https://bloodbros.store/tienda/colectivos/abril-465/samarreta-abril-465/" target="_blank" class="py-10 px-5 w-full flex flex-col gap-5 justify-start items-center">
       <h3>Compra una samarreta</h3>
-      <Image src={samarreta} alt="Compra la samarreta del repte esportiu Abril 465" height={200} />
+      <Image src={samarreta} alt="Compra la samarreta del repte esportiu Abril 465" height={500} />
     </a>
     <a href="https://www.stockcrowd.com/p2p/1799/ABRIL" target="_blank" class="py-10 px-5 w-full flex flex-col gap-5 justify-start items-center">
       <h3>Fes una donació</h3>
-      <Image src={logoPallapupas} alt="Fes una donació a Pallapupas" height={200} />
+      <Image src={logoPallapupas} alt="Fes una donació a Pallapupas" height={500} />
     </a>
   </div>
 </section>
+
+<style>
+  img{
+    height: auto;
+    width: 250px;
+  }
+</style>
