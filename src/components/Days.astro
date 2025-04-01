@@ -15,7 +15,7 @@ days.forEach(d => {
 <section class="p-5 py-10 bg-[#222] bg-gradient-to-br from-[#222] to-[#444533] text-white inclinate">
   <div class="flex flex-col items-center mb-5">
     <p class="text-yellow-500 text-4xl font-semibold">{sum}</p>
-    <p class="text-sm">{`km acumulat${sum !== 1 && 's'}!`}</p>
+    <p class="text-sm">{`km acumulat${sum !== 1 ? 's' : ''}!`}</p>
   </div>
   <div class="grid grid-cols-7 gap-2 max-w-md m-auto">
     <span></span>
